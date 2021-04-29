@@ -1,4 +1,4 @@
-name: Docker-MERN
+name: docker-mern
 on:
   push:
     branches: [ main ]
@@ -34,7 +34,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/Docker-MERN
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-mern
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
